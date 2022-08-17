@@ -28,4 +28,17 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
+        <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+            <directory prefix=".php-cs-fixer.">.</directory>
+        </include>
+        <report>
+            <clover outputFile="phpunit.coverage.xml"/>
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile="phpunit.report.xml"/>
+    </logging>
 </phpunit>
